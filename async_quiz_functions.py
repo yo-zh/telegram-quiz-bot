@@ -1,3 +1,7 @@
+from main import aiosqlite, DB_NAME, logging
+from quiz_data import quiz_data
+from bot_keyboard import generate_options_keyboard
+
 async def get_question(message, user_id):
     current_question_index = await get_quiz_index(user_id)
     correct_index = quiz_data[current_question_index]['correct_option']
